@@ -1,0 +1,98 @@
+#skills {
+	@include span-columns(12 of 12);
+	padding: 7rem 0 8rem;
+	background-color: rgb(198, 198, 198);
+	div.innerWrapper {
+		@include span-columns(12 of 12);
+		display: flex;
+		flex-flow: row-wrap;
+		align-items: center;
+		padding-bottom: 2rem;
+		div.sectionHeader { @include span-columns(6 of 12);}
+		div.skills {
+			@include span-columns(5 of 12);
+			@include shift(1 of 12);
+		}
+	}	
+	p.description {
+		color: #828282;
+	}
+	.row1, 
+	.row2 {
+		@include span-columns(5 of 5);
+		padding:1rem;
+	}
+	h3 {
+		text-align: center;
+		color: $green;
+		line-height: 2;
+		border: 2px solid $green;
+		border-radius: 5px;
+		padding:.5rem 0;
+	}
+	.row1 h3{
+		@include span-columns(3 of 5);
+		&:first-child { @include span-columns(2 of 5);}
+	}
+
+	.row2 h3 {
+		@include span-columns(2 of 5);
+		&:first-child { @include span-columns(1 of 5);}
+	}
+}	
+
+//******************************
+	//Media Queries 
+//******************************
+
+@media (max-width: 788px) {
+	#skills {
+		div.innerWrapper {
+			display: block;
+		}
+		div.innerWrapper div.skills {
+			@include span-columns(6 of 12);
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 653px) {
+	#skills {
+		div.innerWrapper div.sectionHeader { 
+			@include span-columns(12 of 12);
+		}
+		div.innerWrapper div.skills {
+			@include span-columns(8 of 12);
+			@include shift(2 of 12)
+			padding-top: 1rem;
+		}
+	}
+} 
+
+@media (max-width: 489px) {
+	#skills {
+		div.innerWrapper div.skills {
+			@include span-columns(9 of 12);
+			@include shift(1.5 of 12)
+		}
+	} 
+}
+
+@media (max-width: 436px) {
+	#skills {
+		div.innerWrapper div.skills {
+			@include span-columns(12 of 12);
+			margin-left: 0;
+		}
+	} 
+}
+
+@media (max-width: 329px) {
+	#skills {
+		h3 {
+			font-size: 1.5rem;
+		}
+	}
+}
+

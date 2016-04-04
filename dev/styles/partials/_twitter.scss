@@ -1,0 +1,40 @@
+#twitter {
+	@include span-columns(12 of 12);
+	padding: 7rem 0 8rem;
+	background: url(../images/bg4.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	div.twitterUpdate {
+		@include span-columns(8 of 12);
+		@include shift(2 of 12);
+		text-align: center;
+		color:#fff;
+	}
+
+	div.img {
+		width: 10rem;
+		margin: 0 auto;
+		padding-bottom:3rem;
+	}
+
+	span {
+		font-size: 2.1rem;
+		line-height: 1.429;
+	}
+
+	a.site {
+		font-size: 1.45rem;
+		line-height: 2.483;
+		color: #c6c6c6;
+		&:hover {
+			color: #c6c6c6;
+		}
+	}
+	p.time {
+		font-size: 1.2rem;
+		line-height: 2;
+		color: $green;
+		font-style: italic;
+	}
+}

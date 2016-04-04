@@ -1,0 +1,88 @@
+h1,h2,h3,h4,h5 {
+	font-weight: 300;
+	margin: 0;
+}
+
+h1 {
+	font-size: 4.8rem;
+	text-transform: uppercase;
+	padding-bottom: 2rem;
+}
+
+h2 {
+	font-size: 2.8rem;
+	color:#828282;
+	line-height: 1.071;
+	padding-bottom: 1.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+	line-height: 1.08;
+	color:#444;
+}
+
+h4 {
+	font-size: 1.8rem;
+	color:#999999;
+	line-height: 1.667;
+}
+
+h5 a {
+	font-size: 1.6rem;
+	color:#fff;
+	padding: 1rem 2.5rem;
+	border: 2px solid #fff;
+	border-radius: 2px;
+	transition: .5s all ease;
+	&:hover {
+		color:$green;
+		border: 2px solid $green;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+p.description {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #b8b8b8;
+}
+
+p.services {
+	font-size: 1.2rem;
+	line-height: 1.43;
+	font-weight: 400;
+	color:#bababa;
+	padding-right:2rem;
+}
+
+p.smallText {
+	font-size: 1.4rem;
+	line-height: 1.643;
+}
+
+a.continueReading {
+	font-size: 1.03rem;
+	color:$green;
+	border: 1px solid $green;
+	padding: 1rem 2rem;
+	&:hover,
+	&:active {
+		color:$greenHover;
+		border: 1px solid $greenHover;
+	}
+}
+
+p.gallerySubtitle {
+	font-size: 1.2rem;
+	color: #b8b8b8;
+	padding-bottom: 4rem;
+}
+
+p.smallText span {
+	color:$green;
+	margin:2rem 0;
+}

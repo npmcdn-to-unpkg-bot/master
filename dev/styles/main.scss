@@ -1,0 +1,55 @@
+$baseFont:'Lato', sans-serif;
+$green: #0bb697;
+$greenHover: #009e81;
+
+@import 'libraries/bourbon/_bourbon.scss';
+@import 'libraries/neat/_neat.scss';
+@import 'partials/setup';
+@import 'partials/topNav';
+@import 'partials/header';
+@import 'partials/typography';
+@import 'partials/portfolio';
+@import 'partials/services';
+@import 'partials/blog';
+@import 'partials/callToAction';
+@import 'partials/skills';
+@import 'partials/twitter';
+@import 'partials/contact';
+@import 'partials/subscribe';
+@import 'partials/footer';
+@import 'partials/flickity';
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 10px;
+	font-size: 1.0rem;
+	font-family: $baseFont;
+	font-weight: 300;
+	letter-spacing: .02rem;
+}
+
+.wrapper {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+	}
+}
+
+img {
+	width: 100%;
+}

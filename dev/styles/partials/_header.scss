@@ -1,0 +1,179 @@
+header {
+	background: url(../images/bg1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	position: relative;
+	nav {
+		@include span-columns(12 of 12);
+		padding-top: 3rem;
+		display: flex;
+		flex-flow:row wrap;
+		align-items: center;
+		position: relative;
+	}	
+	.logo { 
+		@include span-columns(2 of 12);
+		padding: 1rem;
+	}
+	.logo img {
+		min-width: 14rem;
+	}
+	ul.mainMenu {
+		@include span-columns(9 of 12);
+		text-align: right;
+	}
+	#hamburger {
+		@include span-columns(1 of 12);
+		display: none;
+	}
+	li {
+		font-size: 1.4rem;
+		margin-left:1rem;
+		&:last-child a {
+			background-color: $green;
+			padding:1rem 2rem;
+			&:hover, &:active {
+				background-color: $greenHover;
+			}
+		}
+		a {
+			color:#faf5f5;
+			padding:1rem 2rem;
+			border: 2px solid rgba(255,255,255,0);
+			border-radius: 2px;
+			&:hover, 
+			&:active {
+				border: 2px solid #fff;
+				border-radius: 2px;
+				transition: .5s all ease;
+			}
+			&:active {
+				transition: 0s all;
+			}
+		}
+	}
+	.headSection {
+		@include span-columns(12 of 12);
+		padding-top: 17rem;
+		text-align: center;
+		color: #fff;
+	}	
+	h3 {
+		@include span-columns(8 of 12);
+		@include shift(2 of 12);
+		color:#8b97a5;
+		padding-bottom: 5rem;
+		line-height: 1.4;
+	}
+	h5 {
+		@include span-columns(12 of 12);
+	}
+	.scroll {
+		@include span-columns(12 of 12);
+		position: absolute;
+		bottom: 2rem;
+		left: 0;
+	}	
+	i.fa.fa-bars {
+		color: #fff;
+		font-size: 2rem;
+	}
+	p {
+		font-size: 1rem;
+		padding-bottom: 1rem;
+		color: rgba(255,255,255,.4);
+	}
+	a.scrollButton img {
+		width: 4rem;
+	}
+}
+
+//******************************
+//Media Queries 
+//******************************
+
+@media (max-width: 940px) {
+	header {
+		.wrapper {
+			padding:0;
+		}
+		nav.stickyNav {
+			background-color: #000;
+			position: fixed;
+			width: 100%;
+			z-index: 99;
+			padding-top: 1rem;
+		}
+		div.logo { @include span-columns(2 of 12);}
+		ul.mainMenu {
+			@include span-columns(12 of 12);
+			display: none;
+			background-color: #0B0C11;
+			margin-right: 0;
+		}
+		ul.mainMenu li {
+			padding:2rem;
+			display: block;
+			text-align: center;
+			&:last-child {
+				display: none;
+			}
+		}
+		#hamburger {
+			@include span-columns(2 of 12);
+			@include shift(8 of 12);
+			position: absolute;
+			top:2.5rem;
+			right:0;
+			z-index: 999;
+			display: block;
+			text-align: center;
+		}
+		i.fa.fa-bars {
+			display: block;
+		}
+		h3 {
+			@include span-columns(9 of 12);
+			@include shift(1.5 of 12);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		h3 {
+			@include span-columns(10 of 12);
+			@include shift(1 of 12);
+		}
+		.scroll {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	header {
+		h1 {
+			@include span-columns(10 of 12);
+			@include shift(1 of 12);
+			font-size: 4rem;
+		}
+		h3 {
+			@include span-columns(10 of 12);
+			@include shift(1 of 12);
+		}
+		div.headSection {
+			padding-top: 12rem;
+		}	
+	}
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+	header {
+		height: 568px;
+	}
+}

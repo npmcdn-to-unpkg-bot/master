@@ -1,0 +1,41 @@
+footer {
+	@include span-columns(12 of 12);
+	background-color:  #e2e2e2;
+	padding: 2rem 0;
+
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+
+	.left {
+		@include span-columns(6 of 12);
+	}
+
+	.right {
+		@include span-columns(6 of 12);
+		text-align: right;
+	}
+
+	img.heart {
+		width: 1rem;
+	}
+}
+
+//******************************
+// Media Queries 
+//******************************
+
+@media (max-width: 600px) {
+	footer {
+		.right,
+		.left {
+			text-align: center;
+			@include span-columns(12 of 12);
+		}
+		.left {
+			order: 1;
+		}
+	}
+}

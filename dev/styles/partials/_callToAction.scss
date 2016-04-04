@@ -1,0 +1,23 @@
+#callToAction {
+	@include span-columns(12 of 12);
+	background: url(../images/bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	
+	.wrapper {
+		text-align: center;
+		padding: 7rem 0 8rem;
+	}	
+	
+	h2 {
+		font-size: 3rem;
+		line-height: 1;
+		padding-bottom: 1rem;
+	}
+	
+	h5 {
+		padding-top: 3rem;
+	}
+	
+}

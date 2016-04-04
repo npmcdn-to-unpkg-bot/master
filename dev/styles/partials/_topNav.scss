@@ -1,0 +1,21 @@
+#top-nav  {
+	color: #FFF;
+	margin: 0 auto;
+	@include outer-container(1080px);
+	@include span-columns(12);
+	.mobile-nav,
+	.logo,
+	.social-icons {
+		@include span-columns(4 of 12);
+	}
+	.logo {
+		display: flex;
+		margin: 0;
+		.mercy,
+		img.logo,
+		.heart {
+			align-items: center;
+			text-align: center;
+		}
+	}
+}

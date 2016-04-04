@@ -1,0 +1,155 @@
+#portfolio {
+	@include span-columns(12 of 12);
+	padding: 10rem 0 11rem;
+	#innerWrapper {
+		@include span-columns(12 of 12);
+		display: flex;
+		flex-flow: row-wrap;
+		align-items: center;
+		padding-bottom: 2rem;
+		div.sectionHeader,
+		div.controls {
+			@include span-columns(6 of 12);
+		}
+	}	
+	div.controls {
+		text-align: right;
+		position: relative;
+	}
+	select#filterSelect {
+		@include span-columns(3 of 6);
+		@include shift(3 of 6);
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		color:  #b8b8b8;
+		font-size: 1.5rem;
+		line-height: 2;
+		-webkit-appearance: none;
+		border: 2px solid #eaeaea;
+		border-radius: 2px;
+		text-transform: uppercase;
+		padding: .5rem 2rem;
+		background-color: transparent;
+	}
+	i.fa.fa-angle-down{
+		color:  #b8b8b8;
+		position: absolute;
+		z-index: -1;
+		font-size: 2rem;
+		top:1.2rem;
+		right:3rem;
+	}
+	#container {
+		@include span-columns(12 of 12);
+		text-align: left;
+	}
+	.mix {
+		display: none;
+		width: calc(33.33% - 2%);
+		&:nth-child(3n+2) {
+			margin:0 2.5%;
+		}
+	}
+	.img {
+		position: relative;
+		div.overlay {
+			position: absolute;
+			background-color: rgba(11, 182, 151,.5);
+			top:0;
+			left:0;
+			bottom:2px;
+			right:0;
+			opacity: 0;
+			transition: .5s all ease;
+		}
+		i {
+			position: absolute;
+			font-size: 4rem;
+			padding: 2rem;
+			color: rgba(255,255,255,.5);
+			border: 5px solid rgba(255,255,255,.5);
+			border-radius: 50%;
+			top:38%;
+			left:38%;
+			opacity: 0;
+		}
+		&:hover div.overlay, i{
+			opacity: 1;
+		}
+	}	
+	h3 {
+		color:#828282;
+		padding: 2rem 0;
+	}
+}
+
+//******************************
+// Media Queries
+//******************************
+
+@media (max-width: 600px) {
+	#portfolio {
+		select#filterSelect {
+			@include span-columns(5 of 6);
+			@include shift(1 of 6);
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	#portfolio {
+		#innerWrapper {
+			@include span-columns(6 of 6);
+			display: block;
+		}
+		#innerWrapper div.sectionHeader,
+		#innerWrapper div.controls{
+			@include span-columns(6 of 6);
+			margin-right: 0;
+		}
+		
+		#innerWrapper div.controls {
+			padding: 2rem 0 1rem;
+		}
+		i.fa.fa-angle-down {
+			top: 3.2rem;
+			right: 26rem;
+		}
+		select#filterSelect {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		#container {
+		@include span-columns(10 of 12);
+		@include shift(1 of 12);
+		}
+		.mix {
+			width: calc(48% - 2rem);
+			margin: 1rem;
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	#portfolio {
+		select#filterSelect {
+			@include span-columns(4 of 6);
+		}
+		.mix {
+			width: calc(100% - 2rem);
+			margin: 1rem;
+		}
+		i.fa.fa-angle-down {
+			right: 16rem;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	#portfolio {
+		i.fa.fa-angle-down {
+			right: 12rem;
+		}
+	}
+}
+
